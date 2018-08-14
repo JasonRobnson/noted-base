@@ -5,9 +5,8 @@
   "main": "src/application.js",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js",
-    "build": "rimraf dist && NODE_ENV=production webpack --config ./config/webpack.config.production.js",
-    "test": "jest",
-    "deploy": "yarn run build && aws s3 cp dist/ s3://superimportantwebsite.com --recursive"
+    "build": "rimraf dist && webpack --production  --config ./config/webpack.config.production.js",
+    "test": "jest"
   },
   "author": "Steve Kinney <hello@stevekinney.net> (http://stevekinney.net)",
   "license": "MIT",
@@ -32,7 +31,8 @@
     "react-virtualized": "^9.18.5",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "yarn": "^1.9.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -72,5 +72,13 @@
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekinney/noted-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stevekinney/noted-base/issues"
+  },
+  "homepage": "https://github.com/stevekinney/noted-base#readme"
 }
