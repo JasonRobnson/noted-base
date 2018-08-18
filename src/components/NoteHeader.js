@@ -5,7 +5,7 @@ import Styles from '../styles.css';
 
 const EditButton = ({ match }) => (
   <Link className={Styles.noteheader__button} to={`${match.params.id}/edit`}>
-    TEST
+    EDIT
   </Link>
 );
 
